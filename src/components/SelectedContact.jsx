@@ -30,8 +30,12 @@ export default function SelectedContact({ selectedContactId, setSelectedContactI
     return (
         <div className="detail">
             <h2>{contact.name}</h2>
+            <p>Username: {contact.username}</p>
             <p>Email: {contact.email}</p>
             <p>Phone: {contact.phone}</p>
+            <p>Address: {contact.address.city + " " + contact.address.street + " " + contact.address.suite + " " + contact.address.city + " " + contact.address.zipcode}</p>
+            <p>Company: {contact.company.name}</p>
+            <p>Website: {contact.website}</p>
             <button onClick={() => setSelectedContactId(null)}>Back to Contact List</button>
         </div>
     );
